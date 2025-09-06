@@ -1,12 +1,11 @@
 #include <iostream>
 #include <cmath>
-using namespace std;
 
 
 int iterative(int x, int n)
 {
-    int i, ans = 1;
-    for (i = 0; i < n; i++)    
+    int ans = 1;
+    for (int i = 0; i < n; i++)    
     {
         ans *= x;
     }
@@ -16,7 +15,7 @@ int iterative(int x, int n)
 
 int recursive(int x, int n)
 {
-    int i, ans = 1;
+    int ans = 1;
     if (n == 0) ans = 1;
     else ans = x * pow(x, n - 1);
 
@@ -44,12 +43,13 @@ int main()
 {
     int x, n;
     
-    cout << "x="; cin >> x;
-    cout << "n="; cin >> n;
+    std::cout << "x="; std::cin >> x;
+    std::cout << "n="; std::cin >> n;
 
-    cout << "Iterative solution - " << iterative(x, n) << endl;
-    cout << "Recursive solution - " << recursive(x, n) << endl;
-    cout << "O(log n) solution - " << fastexp(x, n) << endl;
+    std::cout << "Iterative solution - " << iterative(x, n) << endl;
+    std::cout << "Recursive solution - " << recursive(x, n) << endl;
+    std::cout << "O(log n) solution - " << fastexp(x, n) << endl;
 
 }
+
 
