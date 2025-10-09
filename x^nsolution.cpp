@@ -13,11 +13,11 @@ int iterative(int x, int n)
     return ans;
 }
 
-int recursive(int x, int n)
+int recursive(int x, int n)            
 {
-    int ans = 1;
+    int i, ans = 1;
     if (n == 0) ans = 1;
-    else ans = x * pow(x, n - 1);
+    else ans = x * recursive(x, n - 1);
 
     return ans;
 }
@@ -51,5 +51,6 @@ int main()
     std::cout << "O(log n) solution - " << fastexp(x, n) << endl;
 
 }
+
 
 
